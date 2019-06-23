@@ -1,8 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[webpack 配置 Typescript + React]]></title>
+    <url>%2F2019%2F06%2F23%2Fwebpack-ts%2F</url>
+    <content type="text"><![CDATA[webpack Typescript + React在已有的 react 项目中 安装 React 依赖 1yarn add --dev @types/react @types/react-dom 安装 ts 依赖 1yarn add -dev ts-loader typescript 建立 ts 配置文件tsconfig.json 1234567891011&#123; "compilerOptions": &#123; "outDir": "./dist/", "sourceMap": true, "noImplicitAny": true, "module": "commonjs", "target": "es5", "jsx": "react" &#125;, "include": ["./src/**/*"]&#125; 修改 webpack 配置 12345678910111213141516&#123; module: &#123; rules: &#123; &#123; test: /\.(ts|tsx)?$/, use: &#123; loader: 'ts-loader' &#125;, exclude: /node_modules/ &#125;, &#125; &#125;, resolve: &#123; extensions: ['.tsx', '.ts', '.js'] &#125;,&#125;]]></content>
+      <tags>
+        <tag>Webpack</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Webpack decorator 装饰器]]></title>
+    <url>%2F2019%2F06%2F23%2Fwebpack-%E8%A3%85%E9%A5%B0%E5%99%A8%2F</url>
+    <content type="text"><![CDATA[Webpack decorator 装饰器安装依赖 1yarn add --dev @babel/plugin-proposal-class-properties @babel/plugin-proposal-decorators @babel/plugin-syntax-decorators 配置.babelrc 1234567891011121314"plugins": [ [ "@babel/plugin-proposal-decorators", &#123; "legacy": true &#125; ], [ "@babel/plugin-proposal-class-properties", &#123; "loose": true &#125; ] ]]]></content>
+      <tags>
+        <tag>Webpack</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Webpack 配置import 省略文件拓展名称]]></title>
+    <url>%2F2019%2F06%2F23%2Fwebpack-%E6%8B%93%E5%B1%95%E5%90%8D%2F</url>
+    <content type="text"><![CDATA[Webpack 配置 import 省略文件拓展名称resolve.extensions[string]: [&#39;.wasm&#39;, &#39;.mjs&#39;, &#39;.js&#39;, &#39;.json&#39;] 自动解析确定的扩展。默认值为： webpack.config.js 123456module.exports = &#123; //... resolve: &#123; extensions: [&apos;.wasm&apos;, &apos;.mjs&apos;, &apos;.js&apos;, &apos;.json&apos;] &#125;&#125;; 能够使用户在引入模块时不带扩展： 1import File from &apos;../path/to/file&apos;; 使用此选项，会覆盖默认数组，这就意味着 webpack 将不再尝试使用默认扩展来解析模块。对于使用其扩展导入的模块，例如，import SomeFile from &quot;./somefile.ext&quot;，要想正确的解析，一个包含“*”的字符串必须包含在数组中。]]></content>
+      <tags>
+        <tag>Webpack</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[webpack 配置一个React环境]]></title>
-    <url>%2F2019%2F06%2F23%2F%E9%85%8D%E7%BD%AE%E4%B8%80%E4%B8%AAReact%E7%8E%AF%E5%A2%83%2F</url>
+    <url>%2F2019%2F06%2F23%2Fwebapck-%E9%85%8D%E7%BD%AE%E4%B8%80%E4%B8%AAReact%E7%8E%AF%E5%A2%83%2F</url>
     <content type="text"><![CDATA[Webpack 配置一个 React 环境配置一个 React 环境初始化 node 项目 1yarn init -y 安装 webpack 相关依赖 1yarn add webpack webpack-cli --dev 在package.json配置 webpack 生产环境打包脚本 123&quot;scripts&quot;: &#123; &quot;build&quot;: &quot;webpack --mode production&quot;&#125; 为了使浏览器支持诸如Class类 ES6 语法需要配置Babel，将 ES6 转成 ES5 babel preset env 编译 ES6 到 ES5 babel preset react 编译 JSX 语法糖 1yarn add @babel/core babel-loader @babel/preset-env @babel/preset-react --dev 在根目录创建.babelrc配置 123&#123; "presets": ["@babel/preset-env", "@babel/preset-react"]&#125; 在根目录创建webpack.config.js配置 12345678910111213module.exports = &#123; module: &#123; rules: [ &#123; test: /\.(js|jsx)$/, exclude: /node_modules/, use: &#123; loader: 'babel-loader' &#125; &#125; ] &#125;&#125;; 对于 js 和 jsx 拓展名文件，通过 babel-loader，将 ES6 转换为 ES5 安装 React 相关依赖 1yarn add react react-dom 安装配置 Webpack HTML 插件 1yarn add html-webpack-plugin html-loader --dev webpack.config.js配置 12345678910111213141516171819202122232425262728const HtmlWebPackPlugin = require('html-webpack-plugin');module.exports = &#123; module: &#123; rules: [ &#123; test: /\.(js|jsx)$/, exclude: /node_modules/, use: &#123; loader: 'babel-loader' &#125; &#125;, &#123; test: /\.html$/, use: [ &#123; loader: 'html-loader' &#125; ] &#125; ] &#125;, plugins: [ new HtmlWebPackPlugin(&#123; template: './src/index.html', filename: './index.html' &#125;) ]&#125;; 在src/index.html路径，建立 html 文件 123456789101112&lt;!DOCTYPE html&gt;&lt;html lang="en"&gt; &lt;head&gt; &lt;meta charset="UTF-8" /&gt; &lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt; &lt;meta http-equiv="X-UA-Compatible" content="ie=edge" /&gt; &lt;title&gt;Document&lt;/title&gt; &lt;/head&gt; &lt;body&gt; &lt;div id="app"&gt;&lt;/div&gt; &lt;/body&gt;&lt;/html&gt; 在src/index.js路径，建立 webpack 入口 123456import React from 'react';import ReactDOM from 'react-dom';const App = () =&gt; &lt;div&gt;hello world&lt;/div&gt;;const Container = document.getElementById('app');ReactDOM.render(&lt;App /&gt;, Container); 执行打包 1yarn run build 文件已在dist文件夹生成，预览打包文件 1npx run http-server dist/ 配置开发环境热更新安装依赖 1yarn add webpack-dev-server --dev 配置package.json 1234&quot;scripts&quot;: &#123; &quot;start&quot;: &quot;webpack-dev-server --open --mode development&quot;, &quot;build&quot;: &quot;webpack --mode production&quot;&#125; 启动 1yarn start done]]></content>
       <tags>
         <tag>webpack</tag>
@@ -398,10 +422,10 @@
     <url>%2F2017%2F10%2F15%2F2017-10-15%2F</url>
     <content type="text"><![CDATA[递归 进制转换 Linux 删除命令 刷题 2017.10.15递归程序调用自身的编程技巧称为递归（ recursion）。递归做为一种算法在程序设计语言中广泛应用。 一个过程或函数在其定义或说明中有直接或间接调用自身的一种方法，它通常把一个大型复杂的问题层层转化为一个与原问题相似的规模较小的问题来求解，递归策略只需少量的程序就可描述出解题过程所需要的多次重复计算，大大地减少了程序的代码量。递归的能力在于用有限的语句来定义对象的无限集合。一般来说，递归需要有边界条件、递归前进段和递归返回段。当边界条件不满足时，递归前进；当边界条件满足时，递归返回。 for of 循环遍历12345const numbers = [1,2,3,4,5,6,7]lfor (let n of numbers) &#123; console.log((n % 2 ==0) ? 'even' : 'odd');&#125; 迭代器 1234const numbers = [1, 2, 3, 4, 5, 6, 7]let iterator = numbers[Symbol.iterator]();console.log(iterator.next().value) //1 find方法返回第一个满足条件的值 123const a = [1, 2, 3, 'world', 5];console.log(a.find((item) =&gt; typeof item === 'number')) //1 数组里是否存在某个元素 123const a = [1, 2, 3, 'world', 5];console.log(a.includes('world')) //true 数组转换成字符串 1234const a = [1, 2, 3, 'world', 5];console.log(a.toString()) //​​​​​默认 1,2,3,world,5​​​​​ at ​​​a.toString()​​​ console.log(a.join('')) //​​​​​自定义 123world5 今日头条 刷题 页面有一个按钮button id为 button1，通过原生的js 设置背景色为红色？document.getElementById(&quot;button1&quot;).style.backgroundColor=&quot;red&quot; 页面有一个按钮button id为 button1，通过原生的js如何禁用？document.getElementById(&quot;button1&quot;).disabled = true;document.getElementById(&quot;button1&quot;).setAttribute(“disabled”,”true”); 下列排序算法不稳定的有?希尔排序 堆排序 快速排序 选择排序 下列关于操作系统进程与线程的区别正确的是：进程是资源分配的基本单位线程是资源调度的基本单位 网络传输http使用tcp作为运输层协议。Https的端口号是443TCP注重数据安全性，UDP注重数据传输快传输层提供端到端的可靠报文传递和错误恢复 现在有两堆石子,小今与小条玩游戏,2个人都足够聪明,两个人规定:每次每人只能从其中一堆中取走1个或2个或3个石子,最后将石子全部取完的人胜利.现在两堆石子的个数为8和9,请问如何安排才能让小今必胜?智力题想让小今赢，必须把小条逼到在只剩4个石子时选择取走1个或2个或3个石子，这样无论小条取走多少，小今都能胜利。所以小今一定要把石子堆的数量控制在4的倍数，当前是8+9个，小今先从9个中取1个，剩下两个8个的石子堆，无论小条取1/2/3个，小今总能把总量控制在4的倍数，所以让小今先取必胜！ 置换元素（replaced element）主要是指 img, input, textarea, select, object 等这类默认就有 CSS 格式化外表范围的元素。进而可知，非置换元素（non-replaced element）就是除了 img, input, textarea, select, object 等置换元素以外的元素。 在HTML中，（ ）可以在网页上通过链接直接打开邮件客户端发送邮件。&lt; a href=”mailto:ming.zhou@nowcoder.com” &gt;发送邮件&lt; /a &gt; h5 新标签 HTML 标签 标签定义选项列表。请与 input 元素配合使用该元素，来定义 input 可能的值。123456&lt;input id="myCar" list="cars" /&gt;&lt;datalist id="cars"&gt; &lt;option value="BMW"&gt; &lt;option value="Ford"&gt; &lt;option value="Volvo"&gt;&lt;/datalist&gt; 执行计算然后在 元素中显示结果： 通过 标签把相关的选项组合在一起： HTML 标签1234567&lt;form&gt; &lt;fieldset&gt; &lt;legend&gt;health information&lt;/legend&gt; height: &lt;input type="text" /&gt; weight: &lt;input type="text" /&gt; &lt;/fieldset&gt;&lt;/form&gt; Linux 删除文件rm -rf 删除文件夹rm -f 删除文件 十进制转化成任意进制Math.floor() 方法执行的是向下取整计算，它返回的是小于或等于函数参数，并且与之最接近的整数。 123456789101112131415161718function myDivide(num, base) &#123; let arr = [], temp, result = '', digits = '0123456789ABCDEF'; while (num &gt; 0) &#123; temp = Math.floor(num % base); arr.push(temp); num = Math.floor(num / base); &#125; while (arr.length &gt; 0) &#123; result += digits[arr.pop()]; &#125; return result;&#125;]]></content>
       <tags>
-        <tag>刷题</tag>
         <tag>递归</tag>
         <tag>进制转换</tag>
         <tag>Linux</tag>
+        <tag>刷题</tag>
       </tags>
   </entry>
   <entry>

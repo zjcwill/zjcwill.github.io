@@ -1,0 +1,1288 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
+
+<link rel="stylesheet" href="/css/main.css?v=7.1.2">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.1.2">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.1.2">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.1.2">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=7.1.2" color="#222">
+
+
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '7.1.2',
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false,"dimmer":false},
+    back2top: true,
+    back2top_sidebar: false,
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="随机算法 Class React polyfill ajax 固定高度滚动 typeof lastIndexOf parseInt">
+<meta name="keywords" content="parseInt,随机算法,Class,React,polyfillajax,固定高度滚动，typeof,lastIndexOf">
+<meta property="og:type" content="article">
+<meta property="og:title" content="三日 2018.1.3~1.9">
+<meta property="og:url" content="https://zjcwill.top/2018/01/09/2018-1-3/index.html">
+<meta property="og:site_name" content="超神菌BLOG">
+<meta property="og:description" content="随机算法 Class React polyfill ajax 固定高度滚动 typeof lastIndexOf parseInt">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-06-23T14:39:34.315Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="三日 2018.1.3~1.9">
+<meta name="twitter:description" content="随机算法 Class React polyfill ajax 固定高度滚动 typeof lastIndexOf parseInt">
+
+
+
+
+
+  
+  
+  <link rel="canonical" href="https://zjcwill.top/2018/01/09/2018-1-3/">
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>三日 2018.1.3~1.9 | 超神菌BLOG</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">超神菌BLOG</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+
+  </li>
+
+      
+      
+    </ul>
+  
+
+  
+    
+
+  
+
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://zjcwill.top/2018/01/09/2018-1-3/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="超神菌">
+      <meta itemprop="description" content="十年饮冰，难凉热血。">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="超神菌BLOG">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">三日 2018.1.3~1.9
+
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2018-01-09 10:45:15" itemprop="dateCreated datePublished" datetime="2018-01-09T10:45:15+08:00">2018-01-09</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-06-23 22:39:34" itemprop="dateModified" datetime="2019-06-23T22:39:34+08:00">2019-06-23</time>
+              
+            
+          </span>
+
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p><code>随机算法</code> <code>Class</code> <code>React</code> <code>polyfill</code> <code>ajax</code> <code>固定高度滚动</code> <code>typeof</code> <code>lastIndexOf</code> <code>parseInt</code></p>
+<a id="more"></a>
+<h1 id="2018-年-1-月-3-日"><a href="#2018-年-1-月-3-日" class="headerlink" title="2018 年 1 月 3 日"></a>2018 年 1 月 3 日</h1><h2 id="取整算法"><a href="#取整算法" class="headerlink" title="取整算法"></a>取整算法</h2><p>随机数抽奖算法</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">值 = <span class="built_in">Math</span>.floor(<span class="built_in">Math</span>.random() * 可能值的总数 + 第一个可能的值);</span><br></pre></td></tr></table></figure>
+
+<p>公式中用到了 Math.floor()方法，这是因为 Math.random()总返回一个小数值。。而用这个小数值乘以一个整数，然后再加上一个整数，最终结果仍然还是一个小数。举例来说，如果你想选择一个 1 到 10 之间的数值，可以像下面这样编写代码：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> num = <span class="built_in">Math</span>.floor(<span class="built_in">Math</span>.random() * <span class="number">10</span> + <span class="number">1</span>);</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">selectFrom</span>(<span class="params">lowerValue, upperValue</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> choices = upperValue - lowerValue + <span class="number">1</span>; <span class="comment">//一共有几个选项</span></span><br><span class="line">  <span class="keyword">return</span> <span class="built_in">Math</span>.floor(<span class="built_in">Math</span>.random() * choices + lowerValue);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="cookie-大小"><a href="#cookie-大小" class="headerlink" title="cookie 大小"></a>cookie 大小</h2><p>cookie 最大<strong>4096B</strong>(4k) 一般 4095B</p>
+<h2 id="Javascript-在-HTML-执行顺序"><a href="#Javascript-在-HTML-执行顺序" class="headerlink" title="Javascript 在 HTML 执行顺序"></a>Javascript 在 HTML 执行顺序</h2><p>在<code>HTML body</code>部分中的<code>JavaScripts</code>会在<strong>页面加载</strong>的时候被执行。</p>
+<p>在<code>HTML head</code>部分中的<code>JavaScripts</code>会在<strong>被调用</strong>的时候才执行。</p>
+<p><code>head</code> 部分中的脚本: 需调用才执行的脚本或事件触发执行的脚本放在 HTML 的 head 部分中。当你把脚本放在 head 部分中时，可以保证脚本在任何调用之前被加载。</p>
+<p><code>body</code> 部分中的脚本: 当页面被加载时执行的脚本放在 HTML 的 body 部分。放在 body 部分的脚本通常被用来生成页面的内容。 ##　 Prmoise then 回调参数</p>
+<h2 id="Prmoise-then-回调参数"><a href="#Prmoise-then-回调参数" class="headerlink" title="Prmoise then()回调参数"></a>Prmoise then()回调参数</h2><p><code>then</code> 有两个参数 都是回调函数 第一个回调函数，在 <code>Promise</code> 状态为 <code>resolve</code> 执行，第二个在状态为 <code>reject</code> 执行。<code>catch</code> 方法，相当于 <code>then(null,reject)</code>的一个变体。</p>
+<h2 id="循环"><a href="#循环" class="headerlink" title="循环"></a>循环</h2><p>i 第一次为 0</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; <span class="number">5</span>; i++) &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(i); <span class="comment">//0,1,2,3,4</span></span><br><span class="line">&#125; <span class="comment">//i第一次为0</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="string-match"><a href="#string-match" class="headerlink" title="string.match()"></a><code>string.match()</code></h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">str.match(<span class="regexp">/\d+/g</span>);</span><br></pre></td></tr></table></figure>
+
+<h2 id="Class"><a href="#Class" class="headerlink" title="Class"></a>Class</h2><h3 id="类声明"><a href="#类声明" class="headerlink" title="类声明"></a>类声明</h3><p>函数声明和类声明之间的一个重要区别是<strong>函数声明会声明提升，类声明不会。</strong>你首先需要声明你的类，然后访问它</p>
+<h3 id="匿名类-命令类"><a href="#匿名类-命令类" class="headerlink" title="匿名类 命令类"></a>匿名类 命令类</h3><p><strong>匿名类</strong></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> Rectangle = <span class="class"><span class="keyword">class</span> </span>&#123;</span><br><span class="line">  <span class="keyword">constructor</span>(height, width) &#123;</span><br><span class="line">    <span class="keyword">this</span>.height = height;</span><br><span class="line">    <span class="keyword">this</span>.width = width;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p><strong>命名类</strong></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> Rectangle = <span class="class"><span class="keyword">class</span> <span class="title">Rectangle</span> </span>&#123;</span><br><span class="line">  <span class="keyword">constructor</span>(height, weight) &#123;</span><br><span class="line">    <span class="keyword">this</span>.height = height;</span><br><span class="line">    <span class="keyword">this</span>.width = width;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h3 id="构造函数-constructor"><a href="#构造函数-constructor" class="headerlink" title="构造函数 constructor"></a>构造函数 <code>constructor</code></h3><p>用于创建和初始化使用一个类创建的一个对象。</p>
+<p>一个类只能拥有一个名为 “constructor”的特殊方法。</p>
+<p>一个构造函数可以使用 <code>super</code> 关键字来调用一个父类的构造函数。</p>
+<h3 id="原型方法"><a href="#原型方法" class="headerlink" title="原型方法"></a>原型方法</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Rectangle</span> </span>&#123;</span><br><span class="line">  <span class="keyword">constructor</span>(height, width) &#123;</span><br><span class="line">    <span class="keyword">this</span>.height = height;</span><br><span class="line">    <span class="keyword">this</span>.width = width;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="comment">//Getter</span></span><br><span class="line">  get area() &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">this</span>.calcArea();</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="comment">//Method</span></span><br><span class="line">  calcArea() &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">this</span>.height * <span class="keyword">this</span>.width;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">const</span> square = <span class="keyword">new</span> Rectangle(<span class="number">1</span>, <span class="number">3</span>);</span><br><span class="line"><span class="built_in">console</span>.log(square.area); <span class="comment">//3</span></span><br></pre></td></tr></table></figure>
+
+<p><code>Math.hypot()</code> 函数返回它的所有参数的平方和的平方根（可以计算两点间距离（ES6））</p>
+<h3 id="静态方法"><a href="#静态方法" class="headerlink" title="静态方法"></a>静态方法</h3><p><code>static</code>关键字用来定义一个类的一个静态方法。<code>调用</code>静态方法<code>不需要实例化该类</code>，但<code>不能通过一个类实例调用静态方法</code>。静态方法<code>通常用于</code>为一个应用程序创建<code>工具函数</code>。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Point</span> </span>&#123;</span><br><span class="line">  <span class="keyword">constructor</span>(x, y) &#123;</span><br><span class="line">    <span class="keyword">this</span>.x = x;</span><br><span class="line">    <span class="keyword">this</span>.y = y;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">static</span> distance(a, b) &#123;</span><br><span class="line">    <span class="keyword">const</span> dx = a.x - b.x;</span><br><span class="line">    <span class="keyword">const</span> dy = a.y - b.y;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">Math</span>.hypot(dx, dy);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> p1 = <span class="keyword">new</span> Point(<span class="number">5</span>, <span class="number">5</span>);</span><br><span class="line"><span class="keyword">const</span> p2 = <span class="keyword">new</span> Point(<span class="number">10</span>, <span class="number">10</span>);</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(Point.distance(p1, p2));</span><br></pre></td></tr></table></figure>
+
+<h3 id="使用-extends-创建子类"><a href="#使用-extends-创建子类" class="headerlink" title="使用 extends 创建子类"></a>使用 <code>extends</code> 创建子类</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Animal</span> </span>&#123;</span><br><span class="line">  <span class="keyword">constructor</span>(name) &#123;</span><br><span class="line">    <span class="keyword">this</span>.name = name;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  speak() &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="keyword">this</span>.name + <span class="string">" makes a noise."</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Dog</span> <span class="keyword">extends</span> <span class="title">Animal</span> </span>&#123;</span><br><span class="line">  speak() &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="keyword">this</span>.name + <span class="string">" barks."</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> d = <span class="keyword">new</span> Dog(<span class="string">"Mitzie"</span>);</span><br><span class="line"><span class="comment">// 'Mitzie barks.'</span></span><br><span class="line">d.speak();</span><br></pre></td></tr></table></figure>
+
+<p>如果子类中存在构造函数(<code>constructor</code>)，则需要在<strong>使用<code>this</code>之前</strong>首先调用<code>super（）</code>。</p>
+<h3 id="使用-super-调用超类"><a href="#使用-super-调用超类" class="headerlink" title="使用 super 调用超类"></a>使用 <code>super</code> 调用超类</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Cat</span> </span>&#123;</span><br><span class="line">  <span class="keyword">constructor</span>(name) &#123;</span><br><span class="line">    <span class="keyword">this</span>.name = name;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  speak() &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="keyword">this</span>.name + <span class="string">" makes a noise."</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Lion</span> <span class="keyword">extends</span> <span class="title">Cat</span> </span>&#123;</span><br><span class="line">  speak() &#123;</span><br><span class="line">    <span class="keyword">super</span>.speak();</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="keyword">this</span>.name + <span class="string">" roars."</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="2018-年-1-月-5-日"><a href="#2018-年-1-月-5-日" class="headerlink" title="2018 年 1 月 5 日"></a>2018 年 1 月 5 日</h1><h2 id="React"><a href="#React" class="headerlink" title="React"></a>React</h2><h3 id="React-生命周期"><a href="#React-生命周期" class="headerlink" title="React 生命周期"></a>React 生命周期</h3><p><code>componentDidMount</code>,组件已经安装完毕。<code>componentWillUnMount</code>,组将将要卸载。</p>
+<h3 id="state更新可能是异步的"><a href="#state更新可能是异步的" class="headerlink" title="state更新可能是异步的"></a>state更新可能是异步的</h3><p><strong>使用回调函数更改state</strong></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">this</span>.setState(<span class="function">(<span class="params">prevState, props</span>)=&gt;</span>&#123;</span><br><span class="line">    counter:prevState.counter + props.increment</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<h2 id="定时器-setInterval"><a href="#定时器-setInterval" class="headerlink" title="定时器 setInterval()"></a>定时器 <code>setInterval()</code></h2><p><code>setInterval()</code> 方法可按照指定的周期（以毫秒计）来调用函数或计算表达式。</p>
+<p><code>setInterval()</code>方法会不停地调用函数，直到<code>clearInterval()</code> 被调用或窗口被关闭。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> show = <span class="function"><span class="params">()</span>=&gt;</span>&#123;<span class="built_in">console</span>.log(<span class="string">"hello"</span>)&#125;</span><br><span class="line"><span class="keyword">var</span> timer = setInterval(<span class="string">"show()"</span>,<span class="number">1000</span>)<span class="comment">//使用定时器调用函数（定义即开始运行定时器）</span></span><br><span class="line"><span class="keyword">var</span> timer2 = setInterval(<span class="function"><span class="params">()</span>=&gt;</span>&#123;<span class="built_in">console</span>.log(<span class="string">"666"</span>),<span class="number">1000</span>&#125;)</span><br><span class="line">clearInterval(timer)<span class="comment">//清除定时器</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="2018年1月8日"><a href="#2018年1月8日" class="headerlink" title="2018年1月8日"></a>2018年1月8日</h1><h2 id="node答-编程题-输入输出"><a href="#node答-编程题-输入输出" class="headerlink" title="node答 编程题 输入输出"></a>node答 编程题 输入输出</h2><h3 id="名称解释"><a href="#名称解释" class="headerlink" title="名称解释"></a>名称解释</h3><table>
+<thead>
+<tr>
+<th>概念</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>stdin</td>
+<td>标准输入 （standard input）</td>
+</tr>
+<tr>
+<td>stdout</td>
+<td>标准输出（standard output）</td>
+</tr>
+<tr>
+<td>segment</td>
+<td>vi. 分割  （segmentfalut 分割问题）</td>
+</tr>
+<tr>
+<td>scheme</td>
+<td>方案</td>
+</tr>
+<tr>
+<td>padding</td>
+<td>填充、补充</td>
+</tr>
+</tbody></table>
+<h2 id="Polyfill"><a href="#Polyfill" class="headerlink" title="Polyfill"></a>Polyfill</h2><p><code>Polyfill</code>或者<code>Polyfiller</code>，是英国Web开发者 <a href="https://remysharp.com/" target="_blank" rel="noopener">Remy Sharp</a> 在咖啡店蹲坑的时候拍脑袋造出来的。当时他想用一个词来形容”用JavaScript（或者Flash之类的什么鬼）来实现一些浏览器不支持的原生API”。</p>
+<p><code>Polyfill</code>的准确意思为：<strong>用于实现浏览器并不支持的原生API的代码。</strong></p>
+<p>例如，<code>querySelectorAll</code>是很多现代浏览器都支持的原生Web API，但是有些古老的浏览器并不支持，那么假设有人写了库，只要用了这个库， 你就可以在古老的浏览器里面使用<code>document.querySelectorAll</code>，使用方法跟现代浏览器原生API无异。那么这个库就可以称为<code>Polyfill</code>或者<code>Polyfiller</code>。</p>
+<h2 id="AJAX"><a href="#AJAX" class="headerlink" title="AJAX"></a>AJAX</h2><p>AJAX只是一个前端技术，不是新语言。它是利用浏览器提供操作<code>http</code>的接口（<code>XMLHttpRequest</code>或者<code>ActiveXObject</code>）来操作<code>HTTP</code>以达到异步的效果。</p>
+<h3 id="HTTP事务"><a href="#HTTP事务" class="headerlink" title="HTTP事务"></a>HTTP事务</h3><p>一个http事务由一条(从客户端发往服务器的)请求命令和一个(从服务器发回客户端的)响应结果组成。这种通信时通过名为<code>HTTP message</code>的格式化数据块进行的。<br>只有当请求和响应都成功时此http事务才算成功，也就是这条http才算成功。只有当其中任意一个命令(请求或者响应)失败，那么这个http就算失败。<br><em>一个http就是一个http事务</em>，且http事务完成之后此http不可在复用。</p>
+<h3 id="http报文"><a href="#http报文" class="headerlink" title="http报文"></a>http报文</h3><p>请求或者响应的内容就叫做报文。<br>http报文是由一行一行的简单字符串组成的。http报文都是纯文本，不是二进制代码，所以人们可以很方便地对其进行读写。<br>http报文分为三部分：</p>
+<ul>
+<li>起始行<ul>
+<li>报文的第一行就是起始行，在请求报文中用来说明做些什么，在响应报文中说明出现了什么情况。</li>
+</ul>
+</li>
+<li>首部字段<ul>
+<li>起始行后面有零个或多个首部字段。每个首部字段都包含了一个名字和一个值，首部分为5种类型:通用首部、请求首部、响应首部、实体首部、扩展首部</li>
+</ul>
+</li>
+<li>主体<ul>
+<li>报文主体包含了所有类型的数据。请求主体中报错了要发送给web服务器的数据；响应主体中装载了要返回给客户端的数据。起始行和首部字段都是结构化的文本形式的，而主体可以包含任意的二进制数据。当然，主体中也可以包含文本。</li>
+</ul>
+</li>
+</ul>
+<h3 id="HTTP-方法"><a href="#HTTP-方法" class="headerlink" title="HTTP 方法"></a>HTTP 方法</h3><h4 id="GET"><a href="#GET" class="headerlink" title="GET"></a><code>GET</code></h4><ul>
+<li>从服务器向客户端发送命名资源，主要是传给服务器一些参数来获取服务器上指定的资源</li>
+<li>没有请求主体</li>
+<li>发送参数只能将参数<strong>格式化为querystring的格式拼接在RequestURI后</strong></li>
+<li><strong>可以被浏览器缓存</strong></li>
+<li>对发送的数据有大小限制</li>
+</ul>
+<h4 id="POST"><a href="#POST" class="headerlink" title="POST"></a><code>POST</code></h4><ul>
+<li>将客户端数据发送到一个服务器网关程序</li>
+<li>不会被浏览器缓存</li>
+<li>没有发送数据的大小限制</li>
+</ul>
+<h4 id="DELETE"><a href="#DELETE" class="headerlink" title="DELETE"></a><code>DELETE</code></h4><ul>
+<li>从服务器上删除命名资源</li>
+<li>服务器处理成功返回的状态码为202</li>
+</ul>
+<h4 id="HEAD"><a href="#HEAD" class="headerlink" title="HEAD"></a><code>HEAD</code></h4><ul>
+<li>仅发送命名资源中的http首部</li>
+<li>服务器只返回响应起始行和首部，不会返回响应主体</li>
+<li>该方法既没有请求主体也没有响应主体</li>
+</ul>
+<h4 id="PUT"><a href="#PUT" class="headerlink" title="PUT"></a><code>PUT</code></h4><ul>
+<li>将来自客户端的数据存储到一个服务器资源中去</li>
+<li>和POST方法特点类似</li>
+<li>此方法有幂等性，而POST没有</li>
+</ul>
+<h4 id="OPTIONS"><a href="#OPTIONS" class="headerlink" title="OPTIONS"></a><code>OPTIONS</code></h4><ul>
+<li>决定可以从服务器上执行哪些方法</li>
+</ul>
+<h3 id="GET与POST的区别："><a href="#GET与POST的区别：" class="headerlink" title="GET与POST的区别："></a>GET与POST的区别：</h3><ul>
+<li>URL长度限制 浏览器对URL有大小限制，chrome 8k firefox 7k ie 2k</li>
+<li>资源大小限制：get方法限制大小，get是将数据直接拼接在URL后端query部分，而浏览器是对URL有长度限制的，所以get有大小限制。post不限制大小。因为post是将数据放到请求的主体里，而主体是不限制大小的，所以post没有大小限制。</li>
+<li>功能 get主要是用来从服务器拉取数据，而post主要是用来将数据发送到服务器。</li>
+<li>安全 get可以看到发送给服务器的数据，而post不会被看到，因为post把数据放到主体里了。</li>
+</ul>
+<h3 id="HTTP-状态码"><a href="#HTTP-状态码" class="headerlink" title="HTTP 状态码"></a>HTTP 状态码</h3><ul>
+<li><p>200 OK 文档正确返回</p>
+</li>
+<li><p>301 Redirect 永久重定向。一直从其他地方去获取资源</p>
+</li>
+<li><p>302 Redirect 临时重定向。临时到其他地方去获取资源</p>
+</li>
+<li><p>303 see other、307 Temporary Redirect 将客服端重定向到一个负载不大的服务器上，用于负载均衡和服务器失联</p>
+</li>
+<li><p>404 Not Found 无法找到这个资源</p>
+</li>
+<li><p>500 Internal Server Error 服务器错误</p>
+</li>
+</ul>
+<h2 id="div高度固定，实现超出高度实现滚动条"><a href="#div高度固定，实现超出高度实现滚动条" class="headerlink" title="div高度固定，实现超出高度实现滚动条"></a>div高度固定，实现超出高度实现滚动条</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-id">#box</span> &#123;</span><br><span class="line"> <span class="attribute">background</span>:red;</span><br><span class="line">  <span class="attribute">width</span>:<span class="number">200px</span>;</span><br><span class="line">  <span class="attribute">height</span>:<span class="number">100px</span>;</span><br><span class="line">  <span class="attribute">overflow-x</span>:hidden;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>限制高度，上下滚动</p>
+<p><code>overflow-x:hidden;</code>左右滚动</p>
+<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><h3 id="encodeURIComponent"><a href="#encodeURIComponent" class="headerlink" title="encodeURIComponent()"></a><code>encodeURIComponent()</code></h3><p><code>encodeURIComponent()</code> 函数可把字符串作为 URI 组件进行编码。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">encodeURIComponent</span>(<span class="string">"name=pizza&amp;age=18&amp;address=%E5%8C%97%E4%BA%AC"</span>)</span><br><span class="line"><span class="string">"name%3Dpizza%26age%3D18%26address%3D%25E5%258C%2597%25E4%25BA%25AC"</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="2018年1月9日"><a href="#2018年1月9日" class="headerlink" title="2018年1月9日"></a>2018年1月9日</h1><h2 id="单词"><a href="#单词" class="headerlink" title="单词"></a>单词</h2><table>
+<thead>
+<tr>
+<th>英文</th>
+<th align="center">中文</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>accumulator</td>
+<td align="center">累加器</td>
+</tr>
+<tr>
+<td>## <code>typoef</code></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td>可以判断<code>String</code>,<code>Undefined</code>,<code>Boolean</code>,<code>Function</code>,<code>Object</code>（<code>null</code>是空<code>object</code>,<code>Array</code>是<code>object</code>）</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td>## html元素优先级</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td>帧元素 &gt; 表单元素 &gt; 非表单元素</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td>##　iframe 适用场景</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td>iframe可用在以下几个场景中：</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td>1. 典型系统结构，左侧是功能树，右侧就是一些常见的table或者表单之类的。为了每一个功能，单独分离出来，采用iframe。</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td>2. ajax上传文件。</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td>3. 加载别的网站内容，例如google广告，网站流量分析。</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td>4. 在上传图片时，不用flash实现无刷新。</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td>5. 跨域访问的时候可以用到iframe，使用iframe请求不同域名下的资源。</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td>##  Array</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td><code>slice(start,end)</code> 方法可从<strong>已有的数组中返回选定的元素</strong>。</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td>实现<strong>深拷贝</strong></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>];</span><br><span class="line"><span class="keyword">var</span> arr2 = arr.slice(<span class="number">0</span>);<span class="comment">//参数 start end</span></span><br><span class="line"><span class="keyword">var</span> arr3 = arr.concat();</span><br></pre></td></tr></table></figure></td>
+<td align="center"></td>
+</tr>
+</tbody></table>
+<p><code>splice(index,howmanyDel,item1,.....,itemX)</code>方法向/从数组中添加/删除项目，然后返回被删除的项目。</p>
+<h2 id="lastIndexOf-indexOf"><a href="#lastIndexOf-indexOf" class="headerlink" title="lastIndexOf() indexOf()"></a><code>lastIndexOf()</code> <code>indexOf()</code></h2><p><code>Array.prototype.indexOf()</code>方法返回在<strong>数组</strong>中可以找到一个给定元素的<strong>第一个索引</strong>，如果不存在，则返回-1。<br><code>Array.prototype.lastIndexOf()</code> 方法返回指定元素（也即有效的 JavaScript 值或变量）在数组中的<strong>最后一个的索引</strong>，如果不存在则返回 -1。从数组的后面向前查找，从 fromIndex 处开始。<br><code>String.prototype.lastIndexOf(searchvalue,fromindex)</code> （检索字符串，开始索引位置，省略则从最后一个字符串开始检索）方法可返回一个<strong>指定的字符串值最后出现的位置</strong>，在一个字符串中的<strong>指定位置从后向前搜索</strong>。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//* 数组中重复的元素</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">duplicates</span>(<span class="params">arr</span>) </span>&#123;</span><br><span class="line"> <span class="keyword">var</span> result = [];</span><br><span class="line">    arr.forEach(<span class="function"><span class="keyword">function</span>(<span class="params">elem</span>)</span>&#123;</span><br><span class="line">       <span class="keyword">if</span>(arr.indexOf(elem) !=arr.lastIndexOf(elem) &amp;&amp; result.indexOf(elem) == <span class="number">-1</span>)&#123;</span><br><span class="line">           <span class="comment">//首次出现位置 不等于 最后出现位置 ，并且结果里不重复</span></span><br><span class="line">           result.push(elem);</span><br><span class="line">       &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">    <span class="keyword">return</span> result;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="parseInt"><a href="#parseInt" class="headerlink" title="parseInt()"></a>parseInt()</h2><p><code>parseInt()</code> 函数可解析一个字符串，并返回一个整数。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">parseInt</span>(string, radix)</span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>string</td>
+<td>必需。要被解析的字符串。</td>
+</tr>
+<tr>
+<td>radix</td>
+<td>可选。表示要解析的数字的基数。该值介于 2 ~ 36 之间。如果省略该参数或其值为 0，则数字将以 10 为基础来解析。<strong>如果它以 “0x” 或 “0X” 开头，将以 16 为基数。</strong>如果该参数小于 2 或者大于 36，则 parseInt() 将返回 NaN。</td>
+</tr>
+<tr>
+<td><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">parseInt</span>(<span class="string">'0x12'</span>)<span class="comment">//18</span></span><br><span class="line"><span class="built_in">parseInt</span>(<span class="string">'0x12'</span>,<span class="number">10</span>);<span class="comment">//0</span></span><br></pre></td></tr></table></figure></td>
+<td></td>
+</tr>
+</tbody></table>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+        
+          
+        
+        <div class="post-tags">
+          
+            <a href="/tags/parseInt/" rel="tag"># parseInt</a>
+          
+            <a href="/tags/随机算法/" rel="tag"># 随机算法</a>
+          
+            <a href="/tags/Class/" rel="tag"># Class</a>
+          
+            <a href="/tags/React/" rel="tag"># React</a>
+          
+            <a href="/tags/polyfillajax/" rel="tag"># polyfillajax</a>
+          
+            <a href="/tags/固定高度滚动，typeof/" rel="tag"># 固定高度滚动，typeof</a>
+          
+            <a href="/tags/lastIndexOf/" rel="tag"># lastIndexOf</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/12/25/2017-12-20/" rel="next" title="五日 2017.12.20~12.25">
+                <i class="fa fa-chevron-left"></i> 五日 2017.12.20~12.25
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/01/12/2018-1-10/" rel="prev" title="三日 2018.1.11~1.18">
+                三日 2018.1.11~1.18 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">超神菌</p>
+              <div class="site-description motion-element" itemprop="description">十年饮冰，难凉热血。</div>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">62</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  
+                    
+                      <a href="/tags/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">136</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </div>
+
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#2018-年-1-月-3-日"><span class="nav-number">1.</span> <span class="nav-text">2018 年 1 月 3 日</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#取整算法"><span class="nav-number">1.1.</span> <span class="nav-text">取整算法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#cookie-大小"><span class="nav-number">1.2.</span> <span class="nav-text">cookie 大小</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Javascript-在-HTML-执行顺序"><span class="nav-number">1.3.</span> <span class="nav-text">Javascript 在 HTML 执行顺序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Prmoise-then-回调参数"><span class="nav-number">1.4.</span> <span class="nav-text">Prmoise then()回调参数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#循环"><span class="nav-number">1.5.</span> <span class="nav-text">循环</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#string-match"><span class="nav-number">1.6.</span> <span class="nav-text">string.match()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Class"><span class="nav-number">1.7.</span> <span class="nav-text">Class</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#类声明"><span class="nav-number">1.7.1.</span> <span class="nav-text">类声明</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#匿名类-命令类"><span class="nav-number">1.7.2.</span> <span class="nav-text">匿名类 命令类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#构造函数-constructor"><span class="nav-number">1.7.3.</span> <span class="nav-text">构造函数 constructor</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#原型方法"><span class="nav-number">1.7.4.</span> <span class="nav-text">原型方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#静态方法"><span class="nav-number">1.7.5.</span> <span class="nav-text">静态方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用-extends-创建子类"><span class="nav-number">1.7.6.</span> <span class="nav-text">使用 extends 创建子类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用-super-调用超类"><span class="nav-number">1.7.7.</span> <span class="nav-text">使用 super 调用超类</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2018-年-1-月-5-日"><span class="nav-number">2.</span> <span class="nav-text">2018 年 1 月 5 日</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#React"><span class="nav-number">2.1.</span> <span class="nav-text">React</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#React-生命周期"><span class="nav-number">2.1.1.</span> <span class="nav-text">React 生命周期</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#state更新可能是异步的"><span class="nav-number">2.1.2.</span> <span class="nav-text">state更新可能是异步的</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#定时器-setInterval"><span class="nav-number">2.2.</span> <span class="nav-text">定时器 setInterval()</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2018年1月8日"><span class="nav-number">3.</span> <span class="nav-text">2018年1月8日</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#node答-编程题-输入输出"><span class="nav-number">3.1.</span> <span class="nav-text">node答 编程题 输入输出</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#名称解释"><span class="nav-number">3.1.1.</span> <span class="nav-text">名称解释</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Polyfill"><span class="nav-number">3.2.</span> <span class="nav-text">Polyfill</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#AJAX"><span class="nav-number">3.3.</span> <span class="nav-text">AJAX</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#HTTP事务"><span class="nav-number">3.3.1.</span> <span class="nav-text">HTTP事务</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#http报文"><span class="nav-number">3.3.2.</span> <span class="nav-text">http报文</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HTTP-方法"><span class="nav-number">3.3.3.</span> <span class="nav-text">HTTP 方法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#GET"><span class="nav-number">3.3.3.1.</span> <span class="nav-text">GET</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#POST"><span class="nav-number">3.3.3.2.</span> <span class="nav-text">POST</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#DELETE"><span class="nav-number">3.3.3.3.</span> <span class="nav-text">DELETE</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#HEAD"><span class="nav-number">3.3.3.4.</span> <span class="nav-text">HEAD</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#PUT"><span class="nav-number">3.3.3.5.</span> <span class="nav-text">PUT</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#OPTIONS"><span class="nav-number">3.3.3.6.</span> <span class="nav-text">OPTIONS</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#GET与POST的区别："><span class="nav-number">3.3.4.</span> <span class="nav-text">GET与POST的区别：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HTTP-状态码"><span class="nav-number">3.3.5.</span> <span class="nav-text">HTTP 状态码</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#div高度固定，实现超出高度实现滚动条"><span class="nav-number">3.4.</span> <span class="nav-text">div高度固定，实现超出高度实现滚动条</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#其他"><span class="nav-number">3.5.</span> <span class="nav-text">其他</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#encodeURIComponent"><span class="nav-number">3.5.1.</span> <span class="nav-text">encodeURIComponent()</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2018年1月9日"><span class="nav-number">4.</span> <span class="nav-text">2018年1月9日</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#单词"><span class="nav-number">4.1.</span> <span class="nav-text">单词</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#lastIndexOf-indexOf"><span class="nav-number">4.2.</span> <span class="nav-text">lastIndexOf() indexOf()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#parseInt"><span class="nav-number">4.3.</span> <span class="nav-text">parseInt()</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+  
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">超神菌</span>
+
+  
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.8.0</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> v7.1.2</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+
+<script>
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script src="/lib/jquery/index.js?v=3.4.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+
+  
+
+
+  <script src="/js/utils.js?v=7.1.2"></script>
+
+  <script src="/js/motion.js?v=7.1.2"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/schemes/muse.js?v=7.1.2"></script>
+
+
+
+  
+  <script src="/js/scrollspy.js?v=7.1.2"></script>
+<script src="/js/post-details.js?v=7.1.2"></script>
+
+
+
+  
+
+
+  <script src="/js/next-boot.js?v=7.1.2"></script>
+
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+
+  
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

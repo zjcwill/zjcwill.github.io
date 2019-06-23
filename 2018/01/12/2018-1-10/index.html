@@ -1,0 +1,1114 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
+
+<link rel="stylesheet" href="/css/main.css?v=7.1.2">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.1.2">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.1.2">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.1.2">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=7.1.2" color="#222">
+
+
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '7.1.2',
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false,"dimmer":false},
+    back2top: true,
+    back2top_sidebar: false,
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="function.length toString,parseInt Math.pow float计算精度apply,bind,call 闭包">
+<meta name="keywords" content="作用域,function.length,toString,parseInt,Math.pow,float计算精度,闭包">
+<meta property="og:type" content="article">
+<meta property="og:title" content="三日 2018.1.11~1.18">
+<meta property="og:url" content="https://zjcwill.top/2018/01/12/2018-1-10/index.html">
+<meta property="og:site_name" content="超神菌BLOG">
+<meta property="og:description" content="function.length toString,parseInt Math.pow float计算精度apply,bind,call 闭包">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://segmentfault.com/img/remote/1460000012785217?w=689&h=394">
+<meta property="og:updated_time" content="2019-06-23T14:39:34.315Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="三日 2018.1.11~1.18">
+<meta name="twitter:description" content="function.length toString,parseInt Math.pow float计算精度apply,bind,call 闭包">
+<meta name="twitter:image" content="https://segmentfault.com/img/remote/1460000012785217?w=689&h=394">
+
+
+
+
+
+  
+  
+  <link rel="canonical" href="https://zjcwill.top/2018/01/12/2018-1-10/">
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>三日 2018.1.11~1.18 | 超神菌BLOG</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">超神菌BLOG</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+
+  </li>
+
+      
+      
+    </ul>
+  
+
+  
+    
+
+  
+
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://zjcwill.top/2018/01/12/2018-1-10/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="超神菌">
+      <meta itemprop="description" content="十年饮冰，难凉热血。">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="超神菌BLOG">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">三日 2018.1.11~1.18
+
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2018-01-12 10:49:24" itemprop="dateCreated datePublished" datetime="2018-01-12T10:49:24+08:00">2018-01-12</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-06-23 22:39:34" itemprop="dateModified" datetime="2019-06-23T22:39:34+08:00">2019-06-23</time>
+              
+            
+          </span>
+
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p><code>function.length</code> <code>toString,parseInt</code> <code>Math.pow</code> <code>float计算精度</code><br><code>apply,bind,call</code> <code>闭包</code></p>
+<a id="more"></a>
+
+<h1 id="2018-年-1-月-11-日"><a href="#2018-年-1-月-11-日" class="headerlink" title="2018 年 1 月 11 日"></a>2018 年 1 月 11 日</h1><h2 id="单词"><a href="#单词" class="headerlink" title="单词"></a>单词</h2><table>
+<thead>
+<tr>
+<th>英文</th>
+<th>中文</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>closure</td>
+<td>n. 结束;</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id="Function-prototype-apply"><a href="#Function-prototype-apply" class="headerlink" title="Function.prototype.apply()"></a>Function.prototype.apply()</h2><p><strong>apply()</strong> 方法<strong>调用一个函数</strong>, 其具有一个指定的<code>this</code>值，以及作为一个<strong>数组</strong>（或<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections#Working_with_array-like_objects" target="_blank" rel="noopener">类似数组的对象</a>）提供的参数。</p>
+<h2 id="Function-prototype-call"><a href="#Function-prototype-call" class="headerlink" title="Function.prototype.call()"></a>Function.prototype.call()</h2><p><code>call()</code> 方法调用一个函数, 其具有一个指定的<code>this</code>值和分别地提供的参数(<strong>参数的列表</strong>)。</p>
+<blockquote>
+<p><strong>注意：</strong>该方法的作用和 <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/apply" target="_blank" rel="noopener"><code>apply()</code></a> 方法类似，只有一个区别，就是<code>call()</code>方法接受的是<strong>若干个参数的列表</strong>，而<code>apply()</code>方法接受的是<strong>一个包含多个参数的数组</strong>。</p>
+</blockquote>
+<h2 id="Function-prototype-bind"><a href="#Function-prototype-bind" class="headerlink" title="Function.prototype.bind()"></a>Function.prototype.bind()</h2><p><strong>bind()</strong>方法<strong>创建一个新的函数</strong>, 当被调用时，将其 this 关键字设置为提供的值，在调用新函数时，在任何提供之前提供一个给定的<strong>参数序列</strong>。</p>
+<h2 id="闭包"><a href="#闭包" class="headerlink" title="闭包"></a>闭包</h2><h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><p><img src="https://segmentfault.com/img/remote/1460000012785217?w=689&h=394" alt=""></p>
+<p><strong>「函数」和「函数内部能访问到的变量」（也叫环境）的总和，就是一个闭包。</strong></p>
+<p>(三行代码中，有一个局部变量 local，有一个函数 foo，foo 里面可以访问到 local 变量。)</p>
+<h3 id="作用"><a href="#作用" class="headerlink" title="作用"></a>作用</h3><p>闭包常常用来「间接访问一个变量」。换句话说，「隐藏一个变量」。</p>
+<h2 id="arguments"><a href="#arguments" class="headerlink" title="arguments"></a>arguments</h2><p><code>arguments</code>对象不是一个 <code>Array</code> 。它类似于<code>Array</code>，但除了长度之外没有任何<code>Array</code>属性。</p>
+<h3 id="arguments-转换成真正的数组"><a href="#arguments-转换成真正的数组" class="headerlink" title="arguments 转换成真正的数组"></a>arguments 转换成真正的数组</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> args = <span class="built_in">Array</span>.prototype.slice.call(<span class="built_in">arguments</span>);</span><br><span class="line"><span class="keyword">var</span> args = [].slice.call(<span class="built_in">arguments</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// ES2015</span></span><br><span class="line"><span class="keyword">const</span> args = <span class="built_in">Array</span>.from(<span class="built_in">arguments</span>);</span><br></pre></td></tr></table></figure>
+
+<h2 id="Array-from"><a href="#Array-from" class="headerlink" title="Array.from()"></a>Array.from()</h2><p><code>Array.from(arrayLike, mapFn, thisArg)</code>方法从一个<strong>类似数组</strong>(arguments)或<strong>可迭代对象</strong>(Set,String,Map)中<strong>创建一个新的数组实例</strong>。</p>
+<p><code>Array.from()</code> 可以通过以下方式来创建数组对象：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> unqiue = <span class="keyword">new</span> <span class="built_in">Set</span>();</span><br><span class="line">unqiue.add(<span class="number">1</span>);</span><br><span class="line">unqiue.add(<span class="number">1</span>);</span><br><span class="line">unqiue.add(<span class="number">2</span>);</span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Array</span>.from(unqiue,(item)=&gt;item+<span class="number">1</span>));<span class="comment">//[2,3]</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>伪数组对象（拥有一个 <code>length</code> 属性和若干索引属性的任意对象）</li>
+<li><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/iterable" target="_blank" rel="noopener">可迭代对象</a>（可以获取对象中的元素,如 Map 和 Set 等）</li>
+</ul>
+<h3 id="参数"><a href="#参数" class="headerlink" title="参数"></a>参数</h3><ul>
+<li><p><code>arrayLike</code></p>
+<p>想要转换成数组的伪数组对象或可迭代对象。</p>
+</li>
+<li><p><code>mapFn (可选参数)</code></p>
+<p>如果指定了该参数，新数组中的每个元素会执行该回调函数。</p>
+</li>
+<li><p><code>thisArg (可选参数)</code></p>
+<p>可选参数，执行回调函数 <code>mapFn</code> 时 <code>this</code> 对象。</p>
+</li>
+</ul>
+<h3 id="返回值"><a href="#返回值" class="headerlink" title="返回值"></a>返回值</h3><p>一个新的数组实例</p>
+<h2 id="Set"><a href="#Set" class="headerlink" title="Set"></a>Set</h2><p><code>Set</code> 对象允许你存储任何类型的唯一值，无论是原始值或者是对象引用。</p>
+<p><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Set" target="_blank" rel="noopener">MDN Set</a></p>
+<h1 id="2018-年-1-月-12-日"><a href="#2018-年-1-月-12-日" class="headerlink" title="2018 年 1 月 12 日"></a>2018 年 1 月 12 日</h1><h2 id="单词-1"><a href="#单词-1" class="headerlink" title="单词"></a>单词</h2><p>digit n.数字<br>pow n.砰（爆炸）</p>
+<h2 id="Function-length"><a href="#Function-length" class="headerlink" title="Function.length"></a><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/length" target="_blank" rel="noopener">Function.length</a></h2><p><code>length</code> 属性指明函数的<strong>形参个数</strong>。</p>
+<h2 id="toString-Number-转换成二进制"><a href="#toString-Number-转换成二进制" class="headerlink" title="toString() Number 转换成二进制"></a><code>toString()</code> Number 转换成二进制</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">num.toString(<span class="number">2</span>)</span><br></pre></td></tr></table></figure>
+
+<p><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number/toString" target="_blank" rel="noopener"><code>Number.prototype.toString([radix])</code></a>方法返回指定 <code>Number</code> 对象的字符串表示形式。<br><strong>参数</strong></p>
+<ul>
+<li>radix<br>指定要用于数字到字符串的转换的<strong>基数</strong>(从 2 到 36)。如果未指定 radix 参数，则默认值为 10。<h2 id="parseInt-String-转换二进制"><a href="#parseInt-String-转换二进制" class="headerlink" title="parseInt() String 转换二进制"></a><code>parseInt()</code> String 转换二进制</h2><code>parseInt(string, radix)</code> 函数解析一个<strong>字符串</strong>参数，并返回一个<strong>指定基数的整数</strong> (数学系统的基础)。<blockquote>
+<p><code>toString(radix)</code> <code>parseInt(str,radix)</code> 相互对应</p>
+</blockquote>
+<h2 id="Math-pow"><a href="#Math-pow" class="headerlink" title="Math.pow()"></a><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Math/pow" target="_blank" rel="noopener"><code>Math.pow()</code></a></h2><code>Math.pow()</code> 函数返回基数（<code>base</code>）的指数（<code>exponent</code>）次幂，即 <code>baseexponent</code>。</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Math</span>.pow(<span class="number">2</span>,<span class="number">3</span>);<span class="comment">//8 2的3次幂</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="js-浮点型精度问题"><a href="#js-浮点型精度问题" class="headerlink" title="js 浮点型精度问题"></a>js 浮点型精度问题</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Math</span>.formatFloat = <span class="function"><span class="keyword">function</span>(<span class="params">f, digit</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> m = <span class="built_in">Math</span>.pow(<span class="number">10</span>, digit); <span class="comment">//乘10的几次幂</span></span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">parseInt</span>(f * m, <span class="number">10</span>) / m; <span class="comment">//转换10进制，除以10</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> numA = <span class="number">0.1</span>;</span><br><span class="line"><span class="keyword">var</span> numB = <span class="number">0.2</span>;</span><br><span class="line">alert(<span class="built_in">Math</span>.formatFloat(numA + numB, <span class="number">1</span>) === <span class="number">0.3</span>);</span><br></pre></td></tr></table></figure>
+
+<h2 id="js-取小数点后值的长度"><a href="#js-取小数点后值的长度" class="headerlink" title="js 取小数点后值的长度"></a>js 取小数点后值的长度</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> n = <span class="number">3.143423423</span>;</span><br><span class="line"><span class="built_in">console</span>.log(n.toString().split(<span class="string">"."</span>)[<span class="number">1</span>].length);</span><br><span class="line"><span class="comment">//把number类型转换成字符串</span></span><br></pre></td></tr></table></figure>
+
+<p><code>String.prototype.split()</code>方法使用指定的<strong>分隔</strong>符字符串将一个<code>String</code>对象分割<strong>成字符串数组</strong>，以将字符串分隔为子字符串，以确定每个拆分的位置。</p>
+<h1 id="2018-年-1-月-18-日"><a href="#2018-年-1-月-18-日" class="headerlink" title="2018 年 1 月 18 日"></a>2018 年 1 月 18 日</h1><h2 id="Clipboard-剪贴板"><a href="#Clipboard-剪贴板" class="headerlink" title="Clipboard 剪贴板"></a><code>Clipboard</code> 剪贴板</h2><p><code>document.execCommand</code>当一个 HTML 文档切换到设计模式 designMode 时，文档对象暴露 execCommand 方法，该方法允许运行命令来操纵可编辑区域的内容。可以实现（复制，剪切）。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>点击复制后在右边textarea CTRL+V看一下<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">id</span>=<span class="string">"inputText"</span> <span class="attr">value</span>=<span class="string">"测试文本"</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"button"</span> <span class="attr">id</span>=<span class="string">"btn"</span> <span class="attr">value</span>=<span class="string">"复制"</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">textarea</span> <span class="attr">rows</span>=<span class="string">"4"</span>&gt;</span><span class="tag">&lt;/<span class="name">textarea</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="javascript">    <span class="keyword">var</span> btn = <span class="built_in">document</span>.getElementById(<span class="string">'btn'</span>);</span></span><br><span class="line"><span class="javascript">    btn.addEventListener(<span class="string">'click'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span></span><br><span class="line"><span class="javascript">        <span class="keyword">var</span> inputText = <span class="built_in">document</span>.getElementById(<span class="string">'inputText'</span>);</span></span><br><span class="line"><span class="javascript">        <span class="keyword">var</span> currentFocus = <span class="built_in">document</span>.activeElement;</span></span><br><span class="line"><span class="undefined">        inputText.focus();</span></span><br><span class="line"><span class="undefined">        inputText.setSelectionRange(0, inputText.value.length);</span></span><br><span class="line"><span class="javascript">        <span class="built_in">document</span>.execCommand(<span class="string">'copy'</span>, <span class="literal">true</span>);</span></span><br><span class="line"><span class="undefined">        currentFocus.focus();</span></span><br><span class="line"><span class="undefined">    &#125;);</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+        
+          
+        
+        <div class="post-tags">
+          
+            <a href="/tags/作用域/" rel="tag"># 作用域</a>
+          
+            <a href="/tags/function-length/" rel="tag"># function.length</a>
+          
+            <a href="/tags/toString/" rel="tag"># toString</a>
+          
+            <a href="/tags/parseInt/" rel="tag"># parseInt</a>
+          
+            <a href="/tags/Math-pow/" rel="tag"># Math.pow</a>
+          
+            <a href="/tags/float计算精度/" rel="tag"># float计算精度</a>
+          
+            <a href="/tags/闭包/" rel="tag"># 闭包</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/01/09/2018-1-3/" rel="next" title="三日 2018.1.3~1.9">
+                <i class="fa fa-chevron-left"></i> 三日 2018.1.3~1.9
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/01/25/2018-1-25/" rel="prev" title="二日 2018.1.24~1.25">
+                二日 2018.1.24~1.25 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">超神菌</p>
+              <div class="site-description motion-element" itemprop="description">十年饮冰，难凉热血。</div>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">62</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  
+                    
+                      <a href="/tags/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">136</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </div>
+
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#2018-年-1-月-11-日"><span class="nav-number">1.</span> <span class="nav-text">2018 年 1 月 11 日</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#单词"><span class="nav-number">1.1.</span> <span class="nav-text">单词</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Function-prototype-apply"><span class="nav-number">1.2.</span> <span class="nav-text">Function.prototype.apply()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Function-prototype-call"><span class="nav-number">1.3.</span> <span class="nav-text">Function.prototype.call()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Function-prototype-bind"><span class="nav-number">1.4.</span> <span class="nav-text">Function.prototype.bind()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#闭包"><span class="nav-number">1.5.</span> <span class="nav-text">闭包</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#概念"><span class="nav-number">1.5.1.</span> <span class="nav-text">概念</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#作用"><span class="nav-number">1.5.2.</span> <span class="nav-text">作用</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#arguments"><span class="nav-number">1.6.</span> <span class="nav-text">arguments</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#arguments-转换成真正的数组"><span class="nav-number">1.6.1.</span> <span class="nav-text">arguments 转换成真正的数组</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Array-from"><span class="nav-number">1.7.</span> <span class="nav-text">Array.from()</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#参数"><span class="nav-number">1.7.1.</span> <span class="nav-text">参数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#返回值"><span class="nav-number">1.7.2.</span> <span class="nav-text">返回值</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Set"><span class="nav-number">1.8.</span> <span class="nav-text">Set</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2018-年-1-月-12-日"><span class="nav-number">2.</span> <span class="nav-text">2018 年 1 月 12 日</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#单词-1"><span class="nav-number">2.1.</span> <span class="nav-text">单词</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Function-length"><span class="nav-number">2.2.</span> <span class="nav-text">Function.length</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#toString-Number-转换成二进制"><span class="nav-number">2.3.</span> <span class="nav-text">toString() Number 转换成二进制</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#parseInt-String-转换二进制"><span class="nav-number">2.4.</span> <span class="nav-text">parseInt() String 转换二进制</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Math-pow"><span class="nav-number">2.5.</span> <span class="nav-text">Math.pow()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#js-浮点型精度问题"><span class="nav-number">2.6.</span> <span class="nav-text">js 浮点型精度问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#js-取小数点后值的长度"><span class="nav-number">2.7.</span> <span class="nav-text">js 取小数点后值的长度</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2018-年-1-月-18-日"><span class="nav-number">3.</span> <span class="nav-text">2018 年 1 月 18 日</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Clipboard-剪贴板"><span class="nav-number">3.1.</span> <span class="nav-text">Clipboard 剪贴板</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+  
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">超神菌</span>
+
+  
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.8.0</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> v7.1.2</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+
+<script>
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script src="/lib/jquery/index.js?v=3.4.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+
+  
+
+
+  <script src="/js/utils.js?v=7.1.2"></script>
+
+  <script src="/js/motion.js?v=7.1.2"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/schemes/muse.js?v=7.1.2"></script>
+
+
+
+  
+  <script src="/js/scrollspy.js?v=7.1.2"></script>
+<script src="/js/post-details.js?v=7.1.2"></script>
+
+
+
+  
+
+
+  <script src="/js/next-boot.js?v=7.1.2"></script>
+
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+
+  
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
